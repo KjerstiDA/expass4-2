@@ -12,7 +12,7 @@ public class Main {
     private static EntityManagerFactory factory;
 
     public static void main(String[] args) {
-        factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+        factory = Persistence.createEntityManagerFactory("todos");
         EntityManager em = factory.createEntityManager();
         // read the existing entries and write to console
         Query q = em.createQuery("select t from Todo t");
